@@ -4,37 +4,37 @@
 # Required module: mysql-connector-python
 
 import mysql.connector
+from dotenv import load_dotenv
 import os
 
-# Define environment variable DB_PASSWORD as
-# MySQL password (or simply hardcode).  If
-# hardcoded, do not post on public repo.
+load_dotenv()
+
+# DB_PASSWORD must be defined in .env
 pw = os.environ.get('DB_PASSWORD')
 
-# Connect to DB
 mydb = mysql.connector.connect(
-  host="localhost",
-  user="root",
-  password=pw,
-  database="cardb"
+    host='localhost',
+    user='root',
+    password=pw,
+    database='cardb'
 )
 
-# Create a cursor object for executing queries
 mycursor = mydb.cursor()
 
 car_name = input('Input car name: ')
-query = f"SELECT Name, `Retail Price` FROM cars WHERE Name LIKE '{car_name}%'"
+query = f"select Name, `Retail Price` from cars where name like '{car_name}%'"
 
-# Execute the SQL query
+# Execute the query
 mycursor.execute(query)
 results = mycursor.fetchall()
 
-# Output fetched data
 if results:
     for row in results:
-        print(row)  # Each row is a tuple
+        print(row)
 else:
-    print('No matching records found.')
+    print('No matching records.')
 
 mycursor.close()
 mydb.close()
+
+
