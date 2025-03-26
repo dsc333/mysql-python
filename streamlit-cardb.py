@@ -1,17 +1,17 @@
 # DSC 333
 # Streamlit application that interfaces with cardb database
 # running locally
-# Required module: mysql-connector-python, streamlit, pandas
+# Required module: mysql-connector-python, streamlit, pandas, python-dotenv
 
 import streamlit as st
 import mysql.connector
 import pandas as pd
 import os
 
+load_dotenv()
 
 def connect_to_db():
-    # DB_PASSWORD must be defined as an environment variable.
-    # (or simply hardcode).
+    # DB_PASSWORD must be defined in .env.
     pw = os.environ.get('DB_PASSWORD')
 
     # Connect to DB
