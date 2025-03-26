@@ -1,6 +1,6 @@
 # DSC 333
 # Streamlit application that interfaces with cardb database
-# running locally on MySQL
+# running locally in MySQL
 
 import streamlit as st
 import mysql.connector
