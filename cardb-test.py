@@ -1,7 +1,5 @@
 # DSC 333
-# Test program for cardb database discussed
-# in class.
-# Required module: mysql-connector-python
+# Test program for cardb database 
 
 import mysql.connector
 from dotenv import load_dotenv
