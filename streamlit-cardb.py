@@ -1,7 +1,6 @@
 # DSC 333
 # Streamlit application that interfaces with cardb database
-# running locally
-# Required module: mysql-connector-python, streamlit, pandas, python-dotenv
+# running locally on MySQL
 
 import streamlit as st
 import mysql.connector
