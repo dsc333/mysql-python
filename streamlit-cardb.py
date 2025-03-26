@@ -5,6 +5,7 @@
 
 import streamlit as st
 import mysql.connector
+from dotenv import load_dotenv
 import pandas as pd
 import os
 
