@@ -3,12 +3,17 @@
 
 import mysql.connector
 from dotenv import load_dotenv
+import getpass
 import os
 
 load_dotenv()
 
-# DB_PASSWORD must be defined in .env
+# DB_PASSWORD should be defined in .env
 pw = os.environ.get('DB_PASSWORD')
+
+# If password is not defined, prompt the user to input it
+if not pw:
+    pw = getpass.getpass()
 
 mydb = mysql.connector.connect(
     host='localhost',
