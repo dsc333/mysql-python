@@ -1,4 +1,3 @@
-# DSC 333
 # Test program for cardb database 
 
 import mysql.connector
