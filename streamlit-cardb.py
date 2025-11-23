@@ -1,4 +1,3 @@
-# DSC 333
 # Streamlit application that interfaces with cardb database
 # running locally in MySQL
 
