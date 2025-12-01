@@ -1,4 +1,4 @@
-# Test program for cardb database 
+# Test program for cars database 
 
 import mysql.connector
 from dotenv import load_dotenv
@@ -18,7 +18,7 @@ mydb = mysql.connector.connect(
     host='localhost',
     user='root',
     password=pw,
-    database='cardb'
+    database='cars'
 )
 
 mycursor = mydb.cursor()
