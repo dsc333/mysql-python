@@ -1,4 +1,4 @@
-# Streamlit application that interfaces with cardb database
+# Streamlit application that interfaces with cars database
 # running locally in MySQL
 
 import streamlit as st
@@ -18,7 +18,7 @@ def connect_to_db():
       host="localhost",
       user="root",
       password=pw,
-      database="cardb"
+      database="cars"
     )
 
     # Return database connection and cursor object for executing queries
